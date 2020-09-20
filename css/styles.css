@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Quicksand";
+}
+
+html {
+  background-color: #ebebeb;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #9c26b0;
+}
+
+.container {
+  padding-top: 1em;
+  margin: 0 auto;
+  width: 60%;
+  min-width: 360px;
+}
+
+.top-container-contents {
+  padding: 20px;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 10px;
+  background-color: White;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #444;
+}
+
+footer .nav {
+  margin: 0;
+}
+
+.portfolio-image {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main-container {
+  /* Nomrally, position static is default. 
+    Width 100% will look at the first element that is not position static and takes the width from that. 
+    Position relative means the children of this element will take its width. */
+  position: relative;
+}
+
+div.profile-image {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  box-sizing: border-box;
+  background-image: url(/img/leannewong-profile.png);
+  background-origin: content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ebebeb;
+  height: 30vw;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+main {
+  background-color: white;
+}
+
+.section {
+  padding: 50px 30px;
+}
+
+.contact {
+  background-color: #f6f6f6;
+}
+
+hr {
+  margin: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex {
+  display: flex;
+}
+
+.m-2 {
+  margin: 2em;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1em;
+}
+
+@media (max-width:767px) {
+  .xs-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 60%;
+    max-width: 1000;
+  }
+  .xs-only {
+    display: none;
+  }
+  ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    background-color: #f6f6f6;
+  }
+  div.profile-image {
+    width: 40vw;
+    height: 20vw;
+    padding: 1em;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main-container {
+    width: calc(100%/2 - 2*1em);
+    margin: 1em;
+  }
+  .md-flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  header .flex-column p {
+    order: -1;
+    width: 80%;
+    text-align: left;
+    max-width: 60ch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    width: calc(100%/3 - 2*1em);
+    margin: 1em;
+  }
+  .container {
+    width: 80%;
+    max-width: 1000px;
+  }
+  .lg-flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  h1 {
+    float: left;
+  }
+  .main-nav {
+    float: right;
+  }
+  .main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  .profile-image {
+    margin-top: 16px;
+  }
+}
+
+.upper {
+  text-transform: uppercase;
+}
